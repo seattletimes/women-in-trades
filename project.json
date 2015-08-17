@@ -1,0 +1,21 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "",
+      "path": ""
+    },
+    "live": {
+      "bucket": "",
+      "path": ""
+    }
+  },
+  "sheets": ["17Y-lTl7TDbckt8MyhsrMkBiptyWqxeFD_FcX80Uxg8Y"],
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": [],
+  "image": "http://seattletimes.com/art/ui/fb_icon_large.jpg",
+  "production": false,
+  "embedded": true
+}

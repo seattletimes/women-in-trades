@@ -1,0 +1,60 @@
+<%
+
+var grouped = {};
+
+json.WomenInTrades_photos.forEach(function(row, i) {
+  var key = row.join || "single-" + i;
+  if (!grouped[key]) grouped[key] = [];
+  grouped[key].push(row);
+});
+
+%><!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  <body>
+
+    <%= t.include("partials/_dfHeader.html") %>
+
+    <main class="trades-gallery">
+
+
+      <header class="top">
+        <h1>Women in trades: a gallery of photos</h1>
+
+        <p class="chatter">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue eros quis interdum facilisis. Ut a felis ut nisl bibendum sodales in a eros. Duis posuere neque ipsum, eu porttitor orci pulvinar sed. Vestibulum lorem lorem, lobortis vel consectetur sed, accumsan quis neque. Duis a nisi ut nulla aliquam rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin mollis ipsum at feugiat. Nunc tortor massa, tincidunt a hendrerit id, facilisis sed mi. Integer ut arcu lectus. Vestibulum bibendum sit amet risus non pharetra. Donec a tincidunt eros. Ut sit amet faucibus ligula. Nulla imperdiet ex lectus, sed rhoncus erat hendrerit vel. Cras venenatis ac lorem vel aliquet.
+        </p>
+
+      </header>
+
+      <section class="thumbs">
+      <% Object.keys(grouped).forEach(function(key) { %>
+        <div class="group">
+        <% var group = grouped[key];
+        group.forEach(function(row) { %>
+          <img class="thumb" src="./assets/thumbs/<%= row.photo %>" data-image="<%= row.photo %>">
+        <% }); %>
+        </div>
+      <% }); %>
+      </section>
+
+      <section class="modal">
+        <div class="images"></div>
+        <div class="caption"></div>
+      </section>
+
+    </main>
+
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
