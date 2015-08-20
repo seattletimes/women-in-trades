@@ -9,7 +9,7 @@
 @import "flexbox";
 
 @portrait: ~"(orientation: portrait)";
-@background: #333;
+@background: #222;
 @foreground: #EEE;
 
 html, body {
@@ -32,6 +32,11 @@ html, body {
     color: white;
     border-bottom: 1px solid white;
   }
+
+  @media @mobile {
+    position: relative;
+    display: block;
+  }
 }
 
 .branding {
@@ -44,6 +49,11 @@ html, body {
   img {
     max-height: 28px;
     vertical-align: text-bottom;
+
+    @media @mobile {
+      display: block;
+      margin: auto;
+    }
   }
 
   h1 {
@@ -54,6 +64,8 @@ html, body {
     @media @mobile {
       display: block;
       text-align: center;
+      font-size: 28px;
+      margin: 20px 0;
     }
   }
 
@@ -137,6 +149,10 @@ html, body {
 
     &.active {
       .display-flex;
+
+      @media @mobile {
+        display: block;
+      }
     }
   }
 
