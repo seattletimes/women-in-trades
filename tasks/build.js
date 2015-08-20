@@ -9,6 +9,8 @@ var path = require("path");
 
 module.exports = function(grunt) {
 
+  grunt.template.require = require;
+
   grunt.template.formatNumber = function(s) {
     s = s + "";
     var start = s.indexOf(".");
