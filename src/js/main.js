@@ -10,6 +10,7 @@ var slideChange = function(shift) {
   target.classList.add("active");
   var index = target.getAttribute("data-index");
   window.history.replaceState({}, "", `#${index}`);
+  document.body.classList.add("interacted");
 };
 
 if (window.location.hash) {
