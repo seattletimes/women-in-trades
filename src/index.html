@@ -19,36 +19,57 @@ slides = Object.keys(slides).map(function(s) { return slides[s] });
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow|Neuton:400,700' rel='stylesheet' type='text/css'>
     <%= t.include("partials/_adHead.html") %>
   </head>
   <body>
 
     <main class="trades-gallery">
 
-      <section class="slide intro active">
-        <div class="text segment">
-          <h1>Women in trades</h1>
+      <header class="branding">
+        <a href="http://seattletimes.com">
+          <img src="./assets/st-logo.png">
+        </a>
+        <h1>Women in trades</h1>
+        <a class="fullscreen">VIEW FULLSCREEN</a>
+      </header>
 
-          <p class="chatter">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue eros quis interdum facilisis. Ut a felis ut nisl bibendum sodales in a eros. Duis posuere neque ipsum, eu porttitor orci pulvinar sed. Vestibulum lorem lorem, lobortis vel consectetur sed, accumsan quis neque. Duis a nisi ut nulla aliquam rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin mollis ipsum at feugiat. Nunc tortor massa, tincidunt a hendrerit id, facilisis sed mi. Integer ut arcu...
-          </p>
-        </div>
-      </section>
+      <div class="slide-container">
 
-      <% slides.forEach(function(slide) { %>
-      <section class="slide">
-        <% slide.forEach(function(item) { %>
-          <% if (item.photo) { %>
-        <div class="image segment">
-          <img class="photo" src="assets/<%= item.photo %>">
-          <% } else { %>
-        <div class="text segment">
-          <%= item.text %>
-          <% } %>
-        </div>
+        <a class="change-slide next">&gt;</a>
+        <a class="change-slide previous">&lt;</a>
+
+        <!--<section class="slide intro active">
+          <div class="text segment">
+            <h1>Women in trades</h1>
+
+            <p class="chatter">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue eros quis interdum facilisis. Ut a felis ut nisl bibendum sodales in a eros. Duis posuere neque ipsum, eu porttitor orci pulvinar sed. Vestibulum lorem lorem, lobortis vel consectetur sed, accumsan quis neque. Duis a nisi ut nulla aliquam rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin mollis ipsum at feugiat. Nunc tortor massa, tincidunt a hendrerit id, facilisis sed mi. Integer ut arcu...
+            </p>
+          </div>
+        </section>
+        -->
+
+        <% slides.forEach(function(slide, i) { %>
+        <section class="slide <%= !i ? "active" : "" %>">
+          <% slide.forEach(function(item) { %>
+            <% if (item.photo) { %>
+          <div class="image segment">
+              <img class="photo" src="assets/<%= item.photo %>">
+            <% } else { %>
+          <div class="text segment">
+            <%= item.text %>
+            <% } %>
+          </div>
+          <% }); %>
+        </section>
         <% }); %>
-      </section>
-      <% }); %>
+
+      </div>
+
+      <footer class="ad">
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+      </footer>
 
     </main>
 
