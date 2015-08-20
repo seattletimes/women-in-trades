@@ -102,7 +102,7 @@ strong {
   position: fixed;
   z-index: 9999;
   top: 50%;
-  padding: 10px;
+  padding: 10px 4px;
   font-size: 30px;
   font-weight: bold;
   border: 1px solid #EEE;
@@ -124,11 +124,13 @@ strong {
   &.next {
     right: 0;
     border-radius: 4px 0 0 4px;
+    border-right: none;
   }
 
   &.previous {
     left: 0;
     border-radius: 0 4px 4px 0;
+    border-left: none;
   }
 }
 
