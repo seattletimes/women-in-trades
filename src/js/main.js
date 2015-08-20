@@ -8,10 +8,19 @@ var slideChange = function(shift) {
   if (!target || !target.classList.contains("slide")) return;
   current.classList.remove("active");
   target.classList.add("active");
+  var index = target.getAttribute("data-index");
+  window.history.replaceState({}, "", `#${index}`);
 };
 
+if (window.location.hash) {
+  var index = window.location.hash.replace(/#/, "");
+  var jump = document.querySelector(`[data-index="${index}"]`);
+  var active = document.querySelector(".slide.active");
+  active.classList.remove("active");
+  jump.classList.add("active");
+}
+
 document.body.addEventListener("keyup", function(e) {
-  console.log(e.keyCode);
   switch (e.keyCode) {
     case 32: //space
     case 34: //pagedown

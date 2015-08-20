@@ -51,7 +51,7 @@ slides = Object.keys(slides).map(function(s) { return slides[s] });
         -->
 
         <% slides.forEach(function(slide, i) { %>
-        <section class="slide <%= !i ? "active" : "" %>">
+        <section class="slide <%= !i ? "active" : "" %>" data-index="<%= i %>">
           <% slide.forEach(function(item) { %>
             <% if (item.photo) { %>
           <div class="image segment">
