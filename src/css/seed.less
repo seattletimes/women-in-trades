@@ -11,10 +11,19 @@
 @portrait: ~"(orientation: portrait)";
 @background: #222;
 @foreground: #EEE;
+@accent: @df-orange;
 
 html, body {
   background: @background;
   color: @foreground;
+}
+
+h1, h2, h3, {
+  color: @foreground;
+}
+
+strong {
+  color: @accent;
 }
 
 .trades-gallery {
