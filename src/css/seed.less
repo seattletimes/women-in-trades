@@ -206,10 +206,6 @@ em {
   .flex(0 0 50%);
   position: relative;
 
-  &:first-child:last-child {
-    .flex(1 0 100%);
-  }
-
   &.text {
     padding: 32px;
     .display-flex;
@@ -247,6 +243,10 @@ em {
   &.image {
     position: relative;
     padding: 0;
+
+    &:first-child:last-child {
+      .flex(1 0 100%);
+    }
   }
 }
 
