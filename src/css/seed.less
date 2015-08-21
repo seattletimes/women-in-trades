@@ -61,6 +61,8 @@ em {
 
 .branding {
   padding: 8px;
+  .display-flex;
+  .align-items(flex-end);
 
   a {
     border: none;
@@ -97,6 +99,10 @@ em {
     font-family: @df-sans;
     font-size: 12px;
     padding: 8px;
+
+    &:hover {
+      font-weight: bold;
+    }
 
     @media @mobile {
       display: none;
