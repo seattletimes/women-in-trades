@@ -14,20 +14,23 @@ var setActive = function(current, target) {
   window.history.replaceState({}, "", `#${id}`);
   var index = slides.indexOf(target);
   counterDiv.innerHTML = `${index + 1} / ${slides.length}`;
-  document.body.classList.add("interacted");
 };
+
+var clearAd = () => document.body.classList.add("interacted");
 
 var slideChange = function(shift) {
   var current = getActive();
   var target = shift > 0 ? current.nextElementSibling : current.previousElementSibling;
   if (!target || !target.classList.contains("slide")) return;
   setActive(current, target);
+  clearAd();
 };
 
 var jump = function(id) {
   var current = getActive();
   var dest = document.querySelector(`.slide[data-index="${id}"]`);
   setActive(current, dest);
+  clearAd();
 };
 
 if (window.location.hash) {
