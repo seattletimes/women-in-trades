@@ -7,6 +7,7 @@
 
 @import "seattletimes";
 @import "flexbox";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 
 @portrait: ~"(orientation: portrait)";
 @background: #222;
@@ -16,7 +17,10 @@
 html, body {
   background: @background;
   color: @foreground;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
 }
+
 
 h1, h2, h3, {
   color: @foreground;
@@ -24,6 +28,13 @@ h1, h2, h3, {
 
 strong {
   color: @accent;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+em {
+  color: @accent;
+  font-style: normal;
 }
 
 .trades-gallery {
@@ -208,7 +219,7 @@ strong {
       margin-top: 0;
       margin-bottom: 4px;
       text-indent: 20px;
-      font-size: 14px;
+      font-size: 16px;
       display: block;
       max-width: 600px;
 
