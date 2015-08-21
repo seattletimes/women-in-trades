@@ -168,7 +168,7 @@ em {
   .slide {
     display: none;
     .flex(1);
-    .justify-content(space-around);
+    .justify-content(center);
     .align-items(stretch);
     padding: 16px;
 
@@ -203,14 +203,19 @@ em {
 }
 
 .segment {
-  .flex(1 0 50%);
+  .flex(0 0 50%);
   position: relative;
+
+  &:first-child:last-child {
+    .flex(1 0 100%);
+  }
 
   &.text {
     padding: 32px;
     .display-flex;
     .flex-direction(column);
     .justify-content(center);
+    .flex(0 1 600px);
 
     @media @mobile {
       padding: 16px;
