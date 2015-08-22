@@ -40,19 +40,27 @@ slides = Object.keys(slides).map(function(s) { return slides[s] });
         <a class="change-slide next">&raquo;</a>
         <a class="change-slide previous">&laquo;</a>
 
-        <!--<section class="slide intro active">
-          <div class="text segment">
-            <h1>Women in trades</h1>
-
-            <p class="chatter">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue eros quis interdum facilisis. Ut a felis ut nisl bibendum sodales in a eros. Duis posuere neque ipsum, eu porttitor orci pulvinar sed. Vestibulum lorem lorem, lobortis vel consectetur sed, accumsan quis neque. Duis a nisi ut nulla aliquam rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin mollis ipsum at feugiat. Nunc tortor massa, tincidunt a hendrerit id, facilisis sed mi. Integer ut arcu...
-            </p>
+        <section class="slide intro active" data-index="intro">
+          <div class="image segment">
+            <img class="photo" src="assets/WomenTrades035a.jpg">
           </div>
+          
+            
+          <div class="text segment">
+            <h1 class="hed">H<span class="accent">a</span>rd at work</h1>
+            <h3>A look at Seattle women <br>in traditionally masculine trades</h3>
+            <div class="bylines">
+              <p><em>By Susan Kelleher</em></p>
+              <p><em>Photos by Bettina Hansen</em></p>
+              <p><em>Development: Thomas Wilburn, Paige Collins</em></p>
+            </div>
+          </div>
+
         </section>
-        -->
+        
 
         <% slides.forEach(function(slide, i) { %>
-        <section class="slide <%= !i ? "active" : "" %>" data-index="<%= i %>">
+        <section class="slide" data-index="<%= i %>">
           <% slide.forEach(function(item) { %>
             <% if (item.photo) { %>
           <div class="image segment">
@@ -70,7 +78,10 @@ slides = Object.keys(slides).map(function(s) { return slides[s] });
           <div class="outro text segment">
             <h1>About this project</h1>
 
-            <h2>Equipment</h2>
+            <p>Susan Kelleher is a Pacific NW magazine staff writer. Reach her at <a href="mailto:skelleher@seattletimes.com">skelleher@seattletimes.com</a> or 206-464-2508. On Twitter <a href="http://twitter.com/SusanKelleher">@SusanKelleher</a>. 
+
+
+            <p>Bettina Hansen is a Seattle Times staff photographer.
 
             <p>
               The women who posed for this story were photographed using a 4x5 camera with black and white film.
@@ -78,7 +89,8 @@ slides = Object.keys(slides).map(function(s) { return slides[s] });
             <h2>Other stuff</h2>
 
             <p>
-              This space intentionally left blank.
+              POY and Zoe Quinn go here
+            
 
             <p>
               <a data-jump="0" href="javascript:;">Return to start</a>

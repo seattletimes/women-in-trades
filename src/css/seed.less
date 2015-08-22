@@ -32,6 +32,10 @@ strong {
   font-size: 23px;
 }
 
+.accent {
+  color: @accent;
+}
+
 em {
   color: @accent;
   font-style: normal;
@@ -171,6 +175,22 @@ em {
     .justify-content(center);
     .align-items(stretch);
     padding: 16px;
+
+    .hed {
+      font-size: 85px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      text-align: center;
+      line-height: 1.5em;
+    }
+    .bylines {
+      font-size: 20px;
+      text-align: center;
+    }
 
     @media @mobile {
       position: relative;
