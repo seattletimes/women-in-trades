@@ -8,11 +8,12 @@
 @import "seattletimes";
 @import "flexbox";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
 
 @portrait: ~"(orientation: portrait)";
 @background: #222;
 @foreground: #EEE;
-@accent: @df-orange;
+@accent: #AC0000;
 
 html, body {
   background: @background;
@@ -68,6 +69,7 @@ em {
   .display-flex;
   .align-items(flex-end);
 
+
   a {
     border: none;
   }
@@ -88,10 +90,13 @@ em {
     margin: 0 32px;
 
     @media @mobile {
-      display: block;
-      text-align: center;
-      font-size: 28px;
-      margin: 20px 0;
+      display: none;
+    }
+  }
+
+  .counter {
+    @media @mobile {
+      display: none;
     }
   }
 
@@ -101,7 +106,7 @@ em {
     right: 0;
     cursor: pointer;
     font-family: @df-sans;
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px;
 
     &:hover {
@@ -177,19 +182,16 @@ em {
     padding: 16px;
 
     .hed {
-      font-size: 85px;
+      font-size: 75px;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: 0;
+      font-family: 'Oswald', sans-serif;
     }
 
     h3 {
       text-align: center;
       line-height: 1.5em;
-    }
-    .bylines {
-      font-size: 20px;
-      text-align: center;
     }
 
     @media @mobile {
@@ -240,6 +242,14 @@ em {
 
     &.outro {
       .flex(0 0 600px);
+    }
+    
+    .bylines {
+      p { 
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
     }
 
     p {
