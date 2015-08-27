@@ -1,21 +1,21 @@
 {
   "s3": {
     "stage": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "imperfect-devil"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/women-in-trades"
     }
   },
   "sheets": ["17Y-lTl7TDbckt8MyhsrMkBiptyWqxeFD_FcX80Uxg8Y"],
-  "title": "",
-  "description": "",
-  "url": "",
+  "title": "Women in the trades",
+  "description": "A look into Puget Sound's hard-working women in traditionally male jobs.",
+  "url": "http://projects.seattletimes.com/2015/women-in-trades/",
   "slug": "",
-  "tags": [],
-  "image": "http://seattletimes.com/art/ui/fb_icon_large.jpg",
+  "tags": ["pacific nw magazine"],
+  "image": "http://projects.seattletimes.com/2015/women-in-trades/assets/WomenTrades035a.jpg",
   "production": false,
   "embedded": true
 }
