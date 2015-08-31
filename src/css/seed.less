@@ -309,9 +309,14 @@ em {
   .display-flex;
   .flex-direction(row);
   .align-content (space-between);
+
+  @media @mobile {
+    display: block;
+  }
+
   .tzr {
-    width: 45%;
-    margin-right: 20px;
+    .flex(0 0 50%);
+    padding: 8px;
     a {
       border-bottom: none;
     }
@@ -320,6 +325,10 @@ em {
       text-align: left;
       margin-top: 0;
       font-size: 20px;
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
