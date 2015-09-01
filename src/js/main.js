@@ -52,6 +52,14 @@ document.body.addEventListener("keyup", function(e) {
     case 37: //left
       slideChange(-1);
     break;
+
+    case 36: //home
+      jump("intro");
+    break;
+
+    case 35: //end
+      jump("outro");
+    break;
   }
 });
 
@@ -72,10 +80,7 @@ document.body.addEventListener("click", function(e) {
 
   //slide direct links
   if (e.target.hasAttribute("data-jump")) {
-    console.log(e.target);
     var id = e.target.getAttribute("data-jump");
     jump(id);
   }
 });
-
-document.querySelector("")
