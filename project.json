@@ -16,6 +16,6 @@
   "slug": "",
   "tags": ["pacific nw magazine"],
   "image": "http://projects.seattletimes.com/2015/women-in-trades/assets/WomenTrades035a.jpg",
-  "production": false,
-  "embedded": true
+  "production": true,
+  "embedded": false
 }
