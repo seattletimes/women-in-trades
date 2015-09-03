@@ -113,7 +113,7 @@ em {
       font-weight: bold;
     }
 
-    @media @mobile {
+    @media @tablet {
       display: none;
     }
   }
@@ -268,6 +268,7 @@ em {
 
       @media @mobile {
         font-size: 17px;
+        max-width: 100%;
       }
 
       &.chatter {
@@ -290,7 +291,7 @@ em {
   position: absolute;
   top: 50%;
   left: 50%;
-  -wekbit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   max-height: 100%;
 
@@ -299,7 +300,7 @@ em {
     position: relative;
     top: 0;
     left: 0;
-    -wekbit-transform: none;
+    -webkit-transform: none;
     transform: none;
     margin-bottom: 8px;
   }

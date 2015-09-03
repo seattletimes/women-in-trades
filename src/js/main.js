@@ -84,3 +84,19 @@ document.body.addEventListener("click", function(e) {
     jump(id);
   }
 });
+
+var touched = null;
+
+document.body.addEventListener("touchstart", function(e) {
+  var touch = e.touches[0];
+  touched = touch.clientX;
+});
+
+document.body.addEventListener("touchend", function(e) {
+  var touch = e.changedTouches[0];
+  var touchX = touch.clientX;
+  if (Math.abs(touchX - touched) > 100) {
+    slideChange(touchX > touched ? -1 : 1);
+  }
+  touched = null;
+});
