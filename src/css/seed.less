@@ -67,7 +67,11 @@ em {
 .branding {
   padding: 8px;
   .display-flex;
-  .align-items(flex-end);
+  .align-items(flex-start);
+
+  @media @mobile {
+    .justify-content(space-around);
+  }
 
 
   a {
@@ -88,6 +92,7 @@ em {
     color: white;
     display: inline-block;
     margin: 0 32px;
+    font-size: 24px;
 
     @media @mobile {
       display: none;
@@ -95,9 +100,15 @@ em {
   }
 
   .counter {
+    margin: 0 32px;
+
     @media @mobile {
       display: none;
     }
+  }
+
+  .share {
+    z-index: 99999;
   }
 
   .fullscreen {
