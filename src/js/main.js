@@ -45,11 +45,13 @@ document.body.addEventListener("keyup", function(e) {
     case 32: //space
     case 34: //pagedown
     case 39: //right
+    case 40: //down
       slideChange(1);
     break;
 
     case 33: //pageup
     case 37: //left
+    case 38: //up
       slideChange(-1);
     break;
 
